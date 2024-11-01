@@ -1,9 +1,11 @@
 #!/bin/bash
 
-wget -O home.zip https://github.com/omg-xtao/homepage/archive/refs/heads/main.zip
+wget -O homepage-main.zip https://github.com/omg-xtao/homepage/archive/refs/heads/main.zip
 
 rm -rf _index
 
-unzip -o home.zip
+unzip -o homepage-main.zip
 
-rm -rf README.md deploy.sh
+cp -r homepage-main/* ./
+
+rm -rf homepage-main README.md deploy.sh homepage-main.zip
